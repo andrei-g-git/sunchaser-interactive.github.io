@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policies</title>
+<meta name="description" content="Privacy policies for apps published by Sunchaser Interactive.">
+<style>
+  :root {
+    --text: #f5f7ff;
+    --muted: rgba(245, 247, 255, 0.65);
+    --card: rgba(255, 255, 255, 0.10);
+    --card-hover: rgba(255, 255, 255, 0.18);
+    --border: rgba(255, 255, 255, 0.22);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { min-height: 100%; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--text);
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255, 105, 180, 0.45), transparent 45%),
+      radial-gradient(circle at 85% 15%, rgba(0, 210, 255, 0.40), transparent 45%),
+      radial-gradient(circle at 50% 100%, rgba(140, 90, 255, 0.55), transparent 55%),
+      linear-gradient(135deg, #1b1740 0%, #2d1b69 50%, #0f2a5c 100%);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 1.25rem 2rem;
+  }
+
+  header { text-align: center; max-width: 640px; margin-bottom: 2.5rem; }
+
+  h1 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(2rem, 6vw, 3rem);
+    letter-spacing: -0.02em;
+  }
+
+  header p { margin: 0; color: var(--muted); font-size: 1.05rem; }
+
+  main { width: 100%; max-width: 640px; flex: 1; }
+
+  /* One <li> per policy. The list grows downward and wraps long titles/URLs. */
+  .policies {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .policy {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.1rem 1.3rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .policy:hover,
+  .policy:focus-within {
+    background: var(--card-hover);
+    transform: translateY(-2px);
+  }
+
+  .policy a {
+    color: var(--text);
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+
+  .policy a:hover,
+  .policy a:focus-visible { text-decoration: underline; }
+
+  .policy a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; border-radius: 4px; }
+
+  footer {
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .policy { transition: none; }
+    .policy:hover, .policy:focus-within { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Privacy Policies</h1>
+  <p>Privacy information for apps published by Sunchaser Interactive.</p>
+</header>
+
+<main>
+  <ul class="policies">
+
+    <li class="policy">
+      <a href="apps/chord-logic/index.html">Chord Logic – Privacy Policy</a>
+    </li>
+
+    <!-- To add another app: create apps/other-app/index.html, then copy the
+         whole <li> block above and paste it here with the new name and path:
+    <li class="policy">
+      <a href="apps/other-app/index.html">[OTHER APP NAME] – Privacy Policy</a>
+    </li>
+    -->
+
+  </ul>
+</main>
+
+<footer>
+  Questions? Contact interactive.sunchaser@gmail.com
+</footer>
+
+</body>
+</html>
